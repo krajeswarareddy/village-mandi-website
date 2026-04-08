@@ -55,19 +55,25 @@ export default function Home() {
 
         <div className="relative z-10 max-w-3xl">
           <div className="inline-block bg-village-amber bg-opacity-20 border border-village-gold border-opacity-30 text-village-gold text-xs font-bold tracking-widest uppercase px-4 py-1 rounded-full mb-6">
-            🌿 Dulapally's Finest Mandi
+            🚀 Direct Order • No Commission • Best Price
           </div>
-          <h1 className="font-display text-5xl md:text-7xl font-black text-white mb-4 leading-none" style={{ fontFamily: '"Playfair Display", serif' }}>
-            <span className="shimmer-text">The Village</span><br />
-            <span className="text-white">Mandi</span>
-          </h1>
-          <p className="text-village-sand text-lg md:text-xl opacity-90 mb-8 leading-relaxed max-w-xl mx-auto">
-            Authentic Arabian Mandi rice, slow-cooked with tradition. Order directly from us — fresh, fast, no middleman.
+          <h1 className="font-display text-4xl md:text-6xl font-black text-white mb-4 leading-tight">
+  The <br />
+  <span className="text-[#FFC72C]">Village Mandi</span>
+         </h1>
+          <p className="text-village-sand text-lg md:text-xl opacity-90 mb-6 leading-relaxed max-w-xl mx-auto"> 
+  Fresh mandi, faster service, and better prices <br /> straight from our kitchen.
           </p>
-
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-village-sand opacity-70 mb-8">
+  <span>⭐ 4.5+ Rating</span>
+  <span>📍 Dulapally</span>
+  <span>⚡ Instant WhatsApp Orders</span>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/order"
-              className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold text-lg px-8 py-4 rounded-full wa-pulse transition-all"
+              className="flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold text-lg px-8 py-4 rounded-full 
+hover:scale-105 hover:shadow-[0_0_25px_rgba(37,211,102,0.5)] 
+transition-all duration-300"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.564 4.133 1.545 5.862L0 24l6.342-1.512A11.927 11.927 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-4.988-1.364l-.358-.213-3.764.898.928-3.668-.233-.374A9.817 9.817 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/>
@@ -145,11 +151,12 @@ export default function Home() {
 
       {/* CTA BANNER */}
       <section className="py-14 px-4 text-center" style={{ background: 'linear-gradient(135deg,#c8722a,#d4a017)' }}>
-        <h2 className="font-display text-3xl md:text-4xl font-black text-white mb-3" style={{ fontFamily: '"Playfair Display", serif' }}>
-          Hungry? Order Right Now
+        <h2 className="font-display text-3xl md:text-4xl font-black text-white mb-3">
+  Skip Swiggy & Save More on Every Order
         </h2>
         <p className="text-white opacity-90 mb-6 max-w-lg mx-auto">
-          Skip Swiggy &amp; Zomato. Order directly on WhatsApp and get the best price — straight from our kitchen.
+          Order directly on WhatsApp and avoid 20% commission charges.  
+          Get better prices and faster service — straight from our kitchen.
         </p>
         <a href={WA} target="_blank" rel="noreferrer"
           className="inline-flex items-center gap-3 bg-white text-green-700 font-black text-xl px-10 py-4 rounded-full shadow-lg hover:scale-105 transition-transform"
