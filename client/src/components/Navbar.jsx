@@ -29,11 +29,11 @@ export default function Navbar() {
     }`}>
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="The Village Mandi" className="h-12 w-12 rounded-full object-cover" />
-          <div className="hidden sm:block">
-            <p className="text-village-gold font-display font-bold text-lg leading-none" style={{ fontFamily: '"Playfair Display", serif' }}>The Village Mandi</p>
-            <p className="text-village-sand text-xs tracking-wider opacity-70">Dulapally, Hyderabad</p>
+        <Link to="/" className="flex items-center gap-2">
+          <img src="/logo.png" alt="The Village Mandi" className="h-10 w-10 rounded-full object-cover" />
+          <div>
+            <p className="text-village-gold font-display font-bold text-base leading-none" style={{ fontFamily: '"Playfair Display", serif' }}>The Village Mandi</p>
+            <p className="text-village-sand text-xs tracking-wider opacity-70 hidden sm:block">Dulapally, Hyderabad</p>
           </div>
         </Link>
 
