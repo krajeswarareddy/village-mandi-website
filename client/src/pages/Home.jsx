@@ -33,12 +33,14 @@ export default function Home() {
     <div>
       {/* HERO */}
       <section
-        className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20"
-        style={{
-          background: 'linear-gradient(170deg, #1a0e03 0%, #2d1a05 40%, #1a2d05 100%)',
-          overflow: 'hidden'
-        }}
+  className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20"
+  style={{
+    background: 'linear-gradient(170deg, #1a0e03 0%, #2d1a05 40%, #1a2d05 100%)',
+    overflow: 'hidden'
+  }}
       >
+  {/* 🔥 ADD THIS GLOW */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,199,44,0.15),transparent_70%)]"></div>
         {/* Decorative grain overlay */}
         <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23d4a017\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
@@ -57,13 +59,16 @@ export default function Home() {
           <div className="inline-block bg-village-amber bg-opacity-20 border border-village-gold border-opacity-30 text-village-gold text-xs font-bold tracking-widest uppercase px-4 py-1 rounded-full mb-6">
             🚀 Direct Order • No Commission • Best Price
           </div>
-          <h1 className="font-display text-4xl md:text-6xl font-black text-white mb-4 leading-tight">
-  The <br />
-  <span className="text-[#FFC72C]">Village Mandi</span>
-         </h1>
-          <p className="text-village-sand text-lg md:text-xl opacity-90 mb-6 leading-relaxed max-w-xl mx-auto"> 
-  Fresh mandi, faster service, and better prices <br /> straight from our kitchen.
+          <h1 className="font-display text-5xl md:text-7xl font-black text-white mb-3 leading-tight">
+  The Village Mandi
+          </h1>
+
+          <p className="text-[#FFC72C] font-semibold text-lg md:text-xl mb-2">
+  Authentic Mandi Experience in Dulapally
           </p>
+          <p className="text-village-sand text-base md:text-lg opacity-80 mb-6 max-w-xl mx-auto">
+  A simple and memorable way to order your favorite mandi — directly from us.
+</p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-village-sand opacity-70 mb-8">
   <span>⭐ 4.5+ Rating</span>
   <span>📍 Dulapally</span>

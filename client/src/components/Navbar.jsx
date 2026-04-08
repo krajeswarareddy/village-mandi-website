@@ -24,16 +24,18 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-village-darkbrown shadow-lg' : 'bg-transparent'
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md ${
+  scrolled 
+    ? 'bg-[#030200]/80 border-b border-[#B8860B]/20 shadow-lg' 
+    : 'bg-transparent'
+}`}>
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <img src="/logo.png" alt="The Village Mandi" className="h-10 w-10 rounded-full object-cover" />
-          <div>
-            <p className="text-village-gold font-display font-bold text-base leading-none" style={{ fontFamily: '"Playfair Display", serif' }}>The Village Mandi</p>
-            <p className="text-village-sand text-xs tracking-wider opacity-70 hidden sm:block">Dulapally, Hyderabad</p>
+        <Link to="/" className="flex items-center gap-3">
+          <img src="/logo.png" alt="The Village Mandi" className="h-12 w-12 rounded-full object-cover" />
+          <div className="hidden sm:block">
+            <p className="text-village-gold font-display font-bold text-lg leading-none" style={{ fontFamily: '"Playfair Display", serif' }}>The Village Mandi</p>
+            <p className="text-village-sand text-xs tracking-wider opacity-70">Dulapally, Hyderabad</p>
           </div>
         </Link>
 
@@ -41,11 +43,11 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-6">
           {links.map(l => (
             <Link key={l.to} to={l.to}
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === l.to
-                  ? 'text-village-gold border-b border-village-gold'
-                  : 'text-village-sand hover:text-village-gold'
-              }`}
+              className={`text-sm font-medium transition-all duration-300 ${
+  location.pathname === l.to
+    ? 'text-[#FFC72C]'
+    : 'text-village-sand hover:text-[#FFC72C]'
+}`}
             >{l.label}</Link>
           ))}
         </div>
@@ -53,7 +55,9 @@ export default function Navbar() {
         {/* Order button + cart */}
         <div className="flex items-center gap-3">
           <Link to="/order"
-            className="hidden sm:flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white text-sm font-bold px-4 py-2 rounded-full wa-pulse transition-all"
+            className="hidden sm:flex items-center gap-2 bg-[#25D366] text-white text-sm font-bold px-5 py-2 rounded-full 
+hover:scale-105 hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] 
+transition-all duration-300"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
@@ -83,7 +87,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-village-darkbrown border-t border-village-brown px-4 py-4 flex flex-col gap-3">
+        <div className="md:hidden bg-[#030200]/95 backdrop-blur-md border-t border-[#B8860B]/20 px-4 py-4 flex flex-col gap-3">
           {links.map(l => (
             <Link key={l.to} to={l.to} onClick={() => setMenuOpen(false)}
               className="text-village-sand hover:text-village-gold font-medium py-1 border-b border-village-brown border-opacity-30"

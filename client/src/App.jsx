@@ -48,6 +48,15 @@ export default function App() {
             </Routes>
           </main>
           <Footer />
+             <a
+             href="https://wa.me/916302984074"
+             target="_blank"
+             className="fixed bottom-5 right-5 bg-[#25D366] text-white p-4 rounded-full shadow-lg 
+             hover:scale-110 hover:shadow-[0_0_25px_rgba(37,211,102,0.6)] 
+             transition-all duration-300 z-50"
+              >
+             💬
+            </a>
         </div>
       </BrowserRouter>
     </CartProvider>
