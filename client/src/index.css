@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --brown: #4a2c0a;
+  --darkbrown: #2d1a05;
+  --amber: #c8722a;
+  --gold: #d4a017;
+  --cream: #f5f0e8;
+  --green: #2d5016;
+  --sand: #e8d5b0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--cream);
+  color: var(--darkbrown);
+}
+
+/* Village Welcome Screen */
+#village-welcome {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #1a0e03;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+#village-welcome.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Rooster crow animation */
+@keyframes roosterBounce {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50%       { transform: translateY(-12px) rotate(3deg); }
+}
+@keyframes featherWave {
+  0%   { transform: scaleX(1); }
+  50%  { transform: scaleX(1.08); }
+  100% { transform: scaleX(1); }
+}
+@keyframes smokeRise {
+  0%   { opacity: 0.8; transform: translateY(0) scaleX(1); }
+  100% { opacity: 0;   transform: translateY(-40px) scaleX(1.4); }
+}
+@keyframes leafSway {
+  0%, 100% { transform: rotate(-8deg); }
+  50%       { transform: rotate(8deg); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes dotPulse {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
+  40%            { transform: scale(1);   opacity: 1; }
+}
+
+.rooster-anim { animation: roosterBounce 1.2s ease-in-out infinite; }
+.leaf-sway    { animation: leafSway 2s ease-in-out infinite; }
+.smoke-1      { animation: smokeRise 2s ease-out infinite; }
+.smoke-2      { animation: smokeRise 2s ease-out infinite 0.5s; }
+.smoke-3      { animation: smokeRise 2s ease-out infinite 1s; }
+
+.slide-up     { animation: slideUp 0.6s ease forwards; }
+.fade-in-scale{ animation: fadeInScale 0.5s ease forwards; }
+
+/* Gold shimmer text */
+.shimmer-text {
+  background: linear-gradient(90deg, #d4a017 20%, #f5d060 50%, #d4a017 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Whatsapp pulse button */
+@keyframes waPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+  70%  { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+.wa-pulse { animation: waPulse 2s ease-out infinite; }
+
+/* Loading dots */
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); margin: 0 3px; }
+.dot:nth-child(1) { animation: dotPulse 1.4s ease-in-out infinite 0s; }
+.dot:nth-child(2) { animation: dotPulse 1.4s ease-in-out infinite 0.2s; }
+.dot:nth-child(3) { animation: dotPulse 1.4s ease-in-out infinite 0.4s; }
+
+/* Section divider */
+.divider-leaf {
+  width: 60px; height: 2px;
+  background: var(--gold);
+  margin: 12px auto;
+  position: relative;
+}
+.divider-leaf::before {
+  content: '🌿';
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Card hover effect */
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(74,44,10,0.18);
+  transition: all 0.3s ease;
+}
